@@ -11,6 +11,16 @@ const app = Vue.createApp({
     },
 
     methods: {
+        deleteData(index){
+            this.datas.splice(index, 1);
+        },
+
+        editData(index){
+            this.nis = this.datas[index].nis;
+            this.nama = this.datas[index].nama;
+            this.editedData = index;
+        },
+        
         submit(){
             if(this.nis.length === 0) return;
 
@@ -28,16 +38,6 @@ const app = Vue.createApp({
 
             this.nis = '';
             this.nama = '';
-        },
-
-        deleteData(index){
-            this.datas.splice(index, 1);
-        },
-
-        editData(index){
-            this.nis = this.datas[index].nis;
-            this.nama = this.datas[index].nama;
-            this.editedData = index;
-        },
+        }
     }
 })

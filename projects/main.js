@@ -10,7 +10,7 @@ const app = Vue.createApp({
         }
     },
 
-    methods: {
+    methods: { 
         deleteData(index){
             this.datas.splice(index, 1);
         },
@@ -20,7 +20,7 @@ const app = Vue.createApp({
             this.nama = this.datas[index].nama;
             this.editedData = index;
         },
-        
+
         submit(){
             if(this.nis.length === 0) return;
 
